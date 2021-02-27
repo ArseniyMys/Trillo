@@ -1,0 +1,26 @@
+.description {
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  padding: 3rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  transition: all 0.1s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include respond(900) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @include respond(600) {
+    margin: 0 0 3rem 0;
+  }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-medium)
+    }
+}

@@ -1,0 +1,15 @@
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+  font-size: 1.4rem;
+
+  @include respond(900) {
+    padding: 3rem;
+  }
+
+  @include respond(600) {
+    flex-direction: column;
+  }
+}

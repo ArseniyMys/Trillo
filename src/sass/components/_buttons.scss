@@ -1,0 +1,85 @@
+.btn-inline {
+  &:link,
+  &:visited {
+    font-size: inherit;
+    text-decoration: none;
+    color: var(--color-primary);
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    display: inline;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    & span {
+      margin-left: 3px;
+      transition: margin-left 0.2s;
+    }
+
+    &:hover {
+      color: var(--color-grey-dark-1);
+
+      & span {
+        margin-left: 8px;
+      }
+    }
+    &:focus {
+      animation: pulsate 1s infinite;
+    }
+  }
+}
+
+.btn-primary {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: var(--color-white);
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    transition: all 0.3s;
+    transform: translateY(0);
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 2rem 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: -100%;
+  }
+
+  &:hover {
+    transition: all 0.5s;
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+
+  &:hover &__visible,
+  &:hover &__invisible {
+    transform: translateY(100%);
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}

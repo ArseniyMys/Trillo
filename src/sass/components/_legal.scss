@@ -1,0 +1,10 @@
+.legal {
+  color: var(--color-white);
+  padding: 2rem;
+  text-align: center;
+  font-weight: 100;
+
+  @include respond(900) {
+    display: none;
+  }
+}

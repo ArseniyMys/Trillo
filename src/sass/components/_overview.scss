@@ -1,0 +1,99 @@
+.overview {
+  // height: 7rem;
+  border-bottom: var(--line);
+
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    letter-spacing: 1px;
+    display: inline-block;
+
+    @include respond(600) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+
+    @include respond(500) {
+      margin-right: auto;
+    }
+  }
+
+  &__stars {
+    position: relative;
+    margin-right: auto;
+    display: flex;
+    top: -1px;
+
+    @include respond(500) {
+      flex-basis: 50%;
+      order: 1;
+      padding-left: 2rem;
+    }
+  }
+
+  &__star-icon,
+  &__location-icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+
+    @include respond(500) {
+      flex-basis: 50%;
+      order: 2;
+      justify-content: flex-end;
+    }
+  }
+
+  &__location-icon {
+    margin-right: 0.5rem;
+  }
+
+  &__rating {
+    align-self: stretch;
+
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: var(--color-white);
+    padding: 0 2.25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(600) {
+      padding: 0 1.5rem;
+      margin-left: 2rem;
+    }
+
+    &-score {
+      font-size: 2.25rem;
+      font-weight: 300;
+
+      @include respond(600) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-count {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+
+      @include respond(600) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}

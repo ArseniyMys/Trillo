@@ -1,0 +1,21 @@
+.header {
+  height: 7rem;
+  background-color: var(--color-white);
+  border-bottom: var(--line);
+  font-size: 1.4rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(600) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
+
+  &__logo {
+    height: 3rem;
+    margin-left: 2rem;
+  }
+}
